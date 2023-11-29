@@ -10,7 +10,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(186, 203, 218);
+    background-color: rgb(201, 217, 228);
 }
 
 
@@ -68,11 +68,14 @@ body{
 
 
 .banner{
-    background-image: url("..//img/@FERRAZZANO.ESTETICA.png") ;
-    background-repeat: no-repeat; ;
+    background-position: center;
+    background-image: url(../img/IMG_9593.JPG) ;
+    background-repeat: no-repeat; 
+    width: 100%;
     height: calc(100vh - 100px);
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     align-items: center;
 
@@ -128,7 +131,7 @@ body{
 }
 
 
-/*Destinos*/
+/*Tratamientos*/
 
 
 .tratamientos{
@@ -141,11 +144,10 @@ body{
 
 
 .tratamientos h3{
+    margin-top: 1.875rem;
     color: rgb(80, 80, 80);
     text-transform: uppercase ;
     font-size: 3rem;
-
-
 }
 
 
@@ -211,20 +213,23 @@ body{
 }
 
 
-
-
-
-
-
-
 /*profesionales*/
 
-.contenedorProfesonales{
-    display: flex;
-    margin: 10vh;
+
+.tarjetaProf img{
+    width: 50%;
+    height: auto;
+    align-items: center;
+}
+.tarjetaProf p{
+    color: rgb(146, 145, 143);
+    font-weight: 700;
+    font-style: oblique;
 }
 
-
+.especialidades, .contenedorProfesionales{
+    text-align: center;
+}
 /* footer*/
 
 .footer{
@@ -236,7 +241,7 @@ body{
 
 .footerContenido{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -278,10 +283,6 @@ body{
 
 /*BODY*/
 
-body{
-    background-color: rgb(211, 205, 206);
-}
-
 /*HEADER*/
 
 header{
@@ -295,6 +296,7 @@ header{
 }
 
 nav ul li{
+    width: 10.625rem;
     list-style: none;
     display: inline-block;
     margin: 0 10px;
@@ -304,7 +306,7 @@ a{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    color: rgb(204, 139, 150);
+    color: rgb(226, 171, 180);
 }
 
 /*MAIN*/
@@ -317,7 +319,6 @@ main{
 h1,
 h2{
     text-align: center;
-    text-decoration: underline;
     margin: 20px 0px;
 }
 
@@ -385,7 +386,6 @@ footer{
 
 .parrafoAntiage{
     text-align: center;
-    text-decoration: underline;
     margin: 20px 0px;
 }
 
@@ -395,12 +395,21 @@ footer{
 iframe{
     display: block;
     margin: auto;
+    width: 100%;
 }
 
+/*logo*/
+
+.logoContacto{
+    width: 50%;
+}
 
 /*FORMULARIO*/
 
 form{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -466,6 +475,7 @@ textarea{
 
 .tratamientos h3,
 .tratamientos p{
+    color: #a5a1a1;
     font-size: inherit;
 }
 
