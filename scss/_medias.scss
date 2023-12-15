@@ -1,0 +1,45 @@
+@media (max-width: 1023px) {
+    .encabezado {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+
+        .boton {
+            display: none;
+        }
+    }
+
+    .bannerContenido p {
+        font-size: 2.5rem;
+    }
+
+    .tratamientos {
+        margin: 5vh;
+        font-size: 2rem;
+
+        h3,
+        p {
+            color: #a5a1a1;
+            font-size: inherit;
+        }
+    }
+
+    .contenedorTratamientos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contenedorProfesionales {
+        flex-direction: column;
+    }
+
+    .footerContenido {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedorTratamientos {
+        grid-template-columns: 1fr;
+    }
+}

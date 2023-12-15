@@ -1,0 +1,64 @@
+/*HEADER*/
+
+.encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0);
+}
+
+.verde {
+    color: rgb(137, 143, 143);
+}
+
+.boton {
+    background-color: rgb(209, 209, 209);
+    color: rgb(252, 251, 251);
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+
+    &:hover {
+        background-color: rgb(178, 214, 255);
+        color: rgb(3, 3, 3);
+        cursor: pointer;
+    }
+}
+
+.encabezado li {
+    list-style-type: none;
+    display: inline-block;
+
+    a {
+        text-decoration: none;
+        margin: 10px;
+        color: black;
+        font-size: 1.5rem;
+    }
+}
+
+header {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav ul li {
+    width: 10.625rem;
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(226, 171, 180);
+}
