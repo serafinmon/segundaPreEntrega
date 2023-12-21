@@ -1,12 +1,12 @@
-.footer {
+/*.footer {
     background-color: #212121;
     color: #fff;
     padding: 20px 0;
-}
+}*/
 
 .footerContenido {
-    display: flex;
-    justify-content: center;
+/*    display: flex;
+    justify-content: center;*/
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -17,24 +17,38 @@
     margin-bottom: 10px;
 }
 
+.infoContenido{
+    background-color: #e9e4e4;
+    padding: 10px 0px;
+}
 .infoContacto p {
     margin: 5px 0;
     font-size: 1.2rem;
 }
-
+.redesSociales{
+    margin-top: 20px
+}
 .redesSociales a {
+cursor: pointer;
     margin: 5px 0;
-    font-size: 1.2rem;
-    color: yellow;
+    color: rgb(15, 15, 15);
     text-decoration: none;
     margin-right: 10px;
-    font-size: 1.5rem;
+
 
     &:hover {
-        color: lightgreen;
+        color: rgb(138, 136, 136);
     }
 }
+.redesSociales a svg{
+    width: 30px;
+    height: 30px;
 
+}
 .footer i {
     margin-right: 10px;
+}
+
+.whatsapp{
+    margin-left: 50%
 }

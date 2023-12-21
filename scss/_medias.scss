@@ -42,4 +42,12 @@
     .contenedorTratamientos {
         grid-template-columns: 1fr;
     }
+
+
+}
+
+@media (max-width: 400px) {
+    .contenedorTratamientos {
+        grid-template-columns: 1fr;
+    }
 }

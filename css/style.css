@@ -1,254 +1,420 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*HEADER*/
 .encabezado {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    box-shadow: 0px 2px 4px rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0);
 }
 
 .verde {
-    color: rgb(137, 143, 143);
+  color: rgb(137, 143, 143);
 }
 
 .boton {
-    background-color: rgb(209, 209, 209);
-    color: rgb(252, 251, 251);
-    font-weight: 700;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+  background-color: rgb(209, 209, 209);
+  color: rgb(252, 251, 251);
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
 }
-
 .boton:hover {
-    background-color: rgb(178, 214, 255);
-    color: rgb(3, 3, 3);
-    cursor: pointer;
+  background-color: rgb(178, 214, 255);
+  color: rgb(3, 3, 3);
+  cursor: pointer;
 }
 
 .encabezado li {
-    list-style-type: none;
-    display: inline-block;
+  list-style-type: none;
+  display: inline-block;
 }
-
 .encabezado li a {
-    text-decoration: none;
-    margin: 10px;
-    color: black;
-    font-size: 1.5rem;
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+  font-size: 1.5rem;
 }
 
 header {
-    border-bottom: 1px solid black;
-    text-align: center;
-    padding: 10px 20px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 .logo {
-    width: 50%;
+  width: 150px;
+}
+
+.logoContacto {
+  width: 50%;
 }
 
 nav ul li {
-    width: 10.625rem;
-    list-style: none;
-    display: inline-block;
-    margin: 0 10px;
+  width: 10.625rem;
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: rgb(226, 171, 180);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.79);
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #f3f3f3, #bebcbc);
+}
+
+main {
+  margin: 20px;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+footer {
+  margin: 20px;
+  padding: 20px;
+  border-top: 0.0625rem solid black;
+  text-align: center;
+}
+
+.contenedorMED {
+  margin: 3px;
+  border: 4px solid grey;
+  border-radius: 2px;
+}
+
+.imgMED {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+.contenedorAparatologia {
+  margin: 3px;
+  border: 4px solid grey;
+  border-radius: 2px;
+}
+
+.imgAparatologia {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+.contenedorAparatologia p {
+  background-color: gray;
+  color: rgb(243, 205, 149);
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.contenedorAntiage {
+  margin: 30px;
+  border: 4px solid grey;
+  border-radius: 2px;
+}
+
+.imgAntiage {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+.parrafoAntiage {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+iframe {
+  margin: 30px;
+  display: block;
+  width: 95%;
+}
+
+form {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  width: 100%;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: rgb(117, 116, 114);
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.mapTitle {
+  margin-left: 15px;
+}
+
+.botonFormulario {
+  background-color: rgb(163, 170, 170);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 /*BANNER*/
 .banner {
-    background-position: center;
-    background-image: url(../img/IMG_9593.JPG);
-    background-repeat: no-repeat;
-    width: 100%;
-    height: calc(100vh - 100px);
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    align-items: center;
+  background-position: center;
+  background-image: url(../img/IMG_9593.JPG);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
 }
-
 .banner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 0;
 }
 
 .bannerContenido {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-
 .bannerContenido h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: aliceblue;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: aliceblue;
+  margin-bottom: 10px;
 }
-
 .bannerContenido p {
-    color: aliceblue;
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: "Rubik Mono One", sans-serif;
-    margin-bottom: 20px;
-    text-align: center;
+  color: aliceblue;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Rubik Mono One", sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
 }
-
 .bannerContenido .boton {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /*TRATAMIENTOS*/
 .tratamientos {
-    text-align: center;
-    margin: 10vh;
-    border-bottom: 1px solid black;
+  text-align: center;
+  margin: 10vh;
+  border-bottom: 1px solid black;
 }
-
 .tratamientos h3 {
-    margin-top: 1.875rem;
-    color: rgb(80, 80, 80);
-    text-transform: uppercase;
-    font-size: 3rem;
+  margin-top: 1.875rem;
+  color: rgb(80, 80, 80);
+  text-transform: uppercase;
+  font-size: 3rem;
 }
-
 .tratamientos p {
-    font-size: 4rem;
-    color: black;
-    padding: 10px;
+  font-size: 4rem;
+  color: black;
+  padding: 10px;
 }
 
 .contenedorTratamientos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .tratamientos {
-    border: 1px solid white;
-    border-radius: 10px;
-    text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .tarjeta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: aliceblue;
-    border: 1px solid white;
-    padding: 20px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  border: 1px solid white;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
-
 .tarjeta img {
-    max-width: 100%;
+  max-width: 100%;
 }
-
 .tarjeta p {
-    margin: 10px 0;
+  margin: 10px 0;
 }
-
 .tarjeta button {
-    background-color: rgb(178, 214, 255);
-    color: rgb(99, 99, 99);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 10px;
+  background-color: rgb(178, 214, 255);
+  color: rgb(99, 99, 99);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
 }
-
 .tarjeta button:hover {
-    background-color: rgb(50, 69, 243);
+  background-color: rgb(50, 69, 243);
 }
 
 .tarjetaProf img {
-    width: 50%;
-    height: auto;
-    align-items: center;
+  width: 50%;
+  height: auto;
+  align-items: center;
 }
-
 .tarjetaProf p {
-    color: rgb(146, 145, 143);
-    font-weight: 700;
-    font-style: oblique;
+  color: rgb(146, 145, 143);
+  font-weight: 700;
+  font-style: oblique;
 }
 
 .especialidades,
 .contenedorProfesionales {
-    text-align: center;
+  text-align: center;
+}
+
+/*.footer {
+    background-color: #212121;
+    color: #fff;
+    padding: 20px 0;
+}*/
+.footerContenido {
+  /*    display: flex;
+      justify-content: center;*/
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.infoContenido {
+  background-color: #e9e4e4;
+  padding: 10px 0px;
+}
+
+.infoContacto p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.redesSociales {
+  margin-top: 20px;
+}
+
+.redesSociales a {
+  cursor: pointer;
+  margin: 5px 0;
+  color: rgb(15, 15, 15);
+  text-decoration: none;
+  margin-right: 10px;
+}
+.redesSociales a:hover {
+  color: rgb(138, 136, 136);
+}
+
+.redesSociales a svg {
+  width: 30px;
+  height: 30px;
+}
+
+.footer i {
+  margin-right: 10px;
+}
+
+.whatsapp {
+  margin-left: 50%;
 }
 
 @media (max-width: 1023px) {
-    .encabezado {
-        height: auto;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .encabezado .boton {
-        display: none;
-    }
-
-    .bannerContenido p {
-        font-size: 2.5rem;
-    }
-
-    .tratamientos {
-        margin: 5vh;
-        font-size: 2rem;
-    }
-
-    .tratamientos h3,
-    .tratamientos p {
-        color: #a5a1a1;
-        font-size: inherit;
-    }
-
-    .contenedorTratamientos {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contenedorProfesionales {
-        flex-direction: column;
-    }
-
-    .footerContenido {
-        flex-direction: column;
-        text-align: center;
-    }
+  .encabezado {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+  .encabezado .boton {
+    display: none;
+  }
+  .bannerContenido p {
+    font-size: 2.5rem;
+  }
+  .tratamientos {
+    margin: 5vh;
+    font-size: 2rem;
+  }
+  .tratamientos h3,
+  .tratamientos p {
+    color: #a5a1a1;
+    font-size: inherit;
+  }
+  .contenedorTratamientos {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contenedorProfesionales {
+    flex-direction: column;
+  }
+  .footerContenido {
+    flex-direction: column;
+    text-align: center;
+  }
 }
-
 @media (max-width: 768px) {
-    .contenedorTratamientos {
-        grid-template-columns: 1fr;
-    }
+  .contenedorTratamientos {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 400px) {
+  .contenedorTratamientos {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
