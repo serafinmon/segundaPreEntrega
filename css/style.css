@@ -816,3 +816,127 @@ h1, h2 {
 .whatsapp:hover {
   transform: scale(1.5); /* Aumenta el tamaño cuando el ratón pasa por encima */
 }
+
+/* Ajustar tamaño de fuente en pantallas pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Ajustar más aún en pantallas menores a 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+/* Hacer que el menú se apile verticalmente en pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center; /* Centrar los enlaces */
+  }
+}
+
+/* Menu en móvil */
+@media (max-width: 480px) {
+  .encabezado {
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+  }
+
+  .logo {
+    width: 120px; /* Ajustar el tamaño del logo en pantallas pequeñas */
+  }
+
+  .boton {
+    width: 100%; /* Hacer el botón de contacto más ancho en pantallas pequeñas */
+  }
+}
+/* Tarjetas de tratamiento */
+@media (max-width: 768px) {
+  .contenedorTratamientos {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .tarjeta {
+    width: 100%; /* Las tarjetas deben ocupar todo el ancho disponible */
+  }
+}
+
+/* Profesionales - una tarjeta por fila en pantallas pequeñas */
+@media (max-width: 768px) {
+  .tarjetaProf {
+    width: 100%; /* Las tarjetas ocupan el 100% de la fila */
+  }
+}
+
+/* Ajuste en pantallas más pequeñas */
+@media (max-width: 480px) {
+  .tarjetaProf {
+    width: 100%; /* Una tarjeta por fila */
+  }
+}
+/* Asegurar que las imágenes de los contenedores no se deformen */
+.contenedorAntiage img,
+.contenedorAparatologia img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Videos */
+@media (max-width: 768px) {
+  iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 200px; /* Ajustar la altura en pantallas más pequeñas */
+  }
+}  
+/* Pie de página */
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer en pantallas pequeñas */
+@media (max-width: 768px) {
+  .footerContenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+ /* Para el grid de imágenes */
+.imagen-grid,
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .imagen-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+  }
+}
