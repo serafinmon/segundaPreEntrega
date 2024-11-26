@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferrazzano Asthetik</title>
+    <title>Clinica Ferrazzano</title>
     <!--css bs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Incluir Playfair Display desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <!--css-->
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Aplicar Playfair Display a todo el texto */
+        body, p {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400; /* Regular */
+        }
+
+        /* Aplicar Playfair Display en negrita para los títulos */
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700; /* Negrita */
+        }
+    </style>
 </head>
 <body>
     <!--navbar bss-->
-
     <header class="navbar navbar-expand-lg arriba">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"> <img class="logoContacto" src="../img/Ferrazzano.png" alt=""></a>
+            <a class="navbar-brand" href="#"> <img class="logoContacto" src="../img/logo_CF.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,9 +37,10 @@
             <nav class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="aparatologia.html">Aparatologia</a></li>
+                    <li><a href="spa.html">spa</a></li>
                     <li><a href="medicinaestetica.html">Medicina Estetica</a></li>
                     <li><a href="ortomolecular.html">Ortomolecular</a></li>
+                    <li><a href="lista de tratamientos.html">todos los tratamientos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
@@ -33,31 +48,50 @@
     </header>
 
     <main>
+        <!-- Título con Playfair Display en negrita -->
         <h1>Dr Ferrazzano</h1>
-
         <h2>SABIAS QUE ES LA MEDICINA ORTOMOLECULAR</h2>
 
-        <p class="parrafoAntiage">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Dolore exercitationem laboriosam corrupti nostrum cum dolor, <br>nesciunt ipsam totam, hic minus rem distinctio cupiditate repellendus <br>molestias accusantium, sit unde ad modi.</p>
+        <!-- Párrafo con fuente Geist Mono -->
+<p class="parrafoAntiage geist-mono">
+    Desde 2018, la Clínica Ferrazzano se ha consolidado como un centro de referencia en estética y salud, ofreciendo una amplia gama de tratamientos que abarcan desde medicina estética y cirugía plástica hasta terapias de rejuvenecimiento. Nuestro equipo de profesionales de diversas especialidades garantiza un enfoque integral y personalizado para cada paciente.
+    
+    Ubicada en una elegante mansión racionalista, la clínica presenta una decoración que refleja buen gusto y sofisticación. Desde el momento en que ingresas, disfrutarás de un ambiente de calma que permite que tu mente se relaje durante toda tu visita. Además, contamos con un sector de spa donde se realizan masajes, limpiezas faciales y corporales, así como tratamientos con maquinaria estética de última generación.
+</p>
 
-        <div class="contenedorAntiage">
-            <img class="imgAntiage" src="../img/MEdicina antiaging.png" alt="Foto de ortomolecular">
-            
-        </div>
-        <div class="contenedorAntiage">
-            <img class="imgAntiage" src="../img/MEdicina antiaging (1).png" alt="Foto de ortomolecular">
-            
-        </div>
-        <div class="contenedorAntiage">
-            <img class="imgAntiage" src="../img/MEdicina antiaging (2).png" alt="Foto de ortomolecular">
-            
+        <!-- Contenedor de imágenes con 2 filas y 2 imágenes por fila -->
+        <div class="imagen-grid">
+            <div class="contenedorAntiage">
+                <img class="imgAntiage" src="../img/sueroterapia (4).png" alt="Foto de ortomolecular">
+            </div>
+            <div class="contenedorAntiage">
+                <img class="imgAntiage" src="../img/sueroterapia (2).png" alt="Foto de ortomolecular">
+            </div>
+            <div class="contenedorAntiage">
+                <img class="imgAntiage" src="../img/sueroterapia (1).png" alt="Foto de ortomolecular">
+            </div>
+            <div class="contenedorAntiage">
+                <img class="imgAntiage" src="../img/sueroterapia (3).png" alt="Foto de ortomolecular">
+            </div>
         </div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/i8_E2xsmJo4?si=t1hIIxE6R_znSbqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- Contenedor de videos -->
+        <div class="video-grid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Jn5vVTkT_64?si=zBnstd0oH1-FDlIh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!-- Segundo video local (reemplazado el iframe de YouTube Shorts) -->
+            <video width="560" height="315" controls>
+                <source src="../video/suero.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+
     </main>
 
     <footer>
         <h3> Todos los derechos reservados a Serafin S.A </h3>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>

@@ -1,9 +1,23 @@
+/* General Reset */
 * {
-  margin: 0;
+  margin: 5;
   padding: 0;
 }
 
-/*HEADER*/
+/* BODY */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Color de fondo opcional */
+  background-image: linear-gradient(to bottom right, #f3f3f3, #bebcbc); /* Fondo degradado */
+}
+
+/* HEADER */
+header {
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 10px 20px;
+}
+
 .encabezado {
   display: flex;
   justify-content: space-around;
@@ -12,8 +26,24 @@
   box-shadow: 0px 2px 4px rgb(0, 0, 0);
 }
 
-.verde {
-  color: rgb(137, 143, 143);
+.encabezado li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.encabezado li a {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logoContacto {
+  width: 24%;
 }
 
 .boton {
@@ -24,42 +54,11 @@
   padding: 10px 20px;
   font-size: 1.2rem;
 }
+
 .boton:hover {
   background-color: rgb(178, 214, 255);
   color: rgb(3, 3, 3);
   cursor: pointer;
-}
-
-.encabezado li {
-  list-style-type: none;
-  display: inline-block;
-}
-.encabezado li a {
-  text-decoration: none;
-  margin: 10px;
-  color: black;
-  font-size: 1.5rem;
-}
-
-header {
-  border-bottom: 1px solid black;
-  text-align: center;
-  padding: 10px 20px;
-}
-
-.logo {
-  width: 150px;
-}
-
-.logoContacto {
-  width: 50%;
-}
-
-nav ul li {
-  width: 10.625rem;
-  list-style: none;
-  display: inline-block;
-  margin: 0 10px;
 }
 
 a {
@@ -69,10 +68,7 @@ a {
   color: rgba(0, 0, 0, 0.79);
 }
 
-body {
-  background-image: linear-gradient(to bottom right, #f3f3f3, #bebcbc);
-}
-
+/* MAIN */
 main {
   margin: 20px;
   padding: 20px;
@@ -84,6 +80,12 @@ h2 {
   margin: 20px 0px;
 }
 
+.parrafoAntiage {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+/* FOOTER */
 footer {
   margin: 20px;
   padding: 20px;
@@ -91,26 +93,73 @@ footer {
   text-align: center;
 }
 
-.contenedorMED {
-  margin: 3px;
+/* MEDIA QUERIES */
+@media (max-width: 1023px) {
+  .encabezado {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .encabezado .boton {
+    display: none;
+  }
+
+  .bannerContenido p {
+    font-size: 2.5rem;
+  }
+
+  .tratamientos {
+    margin: 5vh;
+    font-size: 2rem;
+  }
+
+  .contenedorTratamientos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footerContenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedorTratamientos {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjetaProf {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedorTratamientos {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjetaProf {
+    width: 100%;
+  }
+}
+
+/* CONTAINERS AND IMAGES */
+.contenedorMED,
+.contenedorAparatologia,
+.contenedorAntiage {
+  margin: 30px;
   border: 4px solid grey;
   border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
-.imgMED {
-  display: block;
-  width: 50%;
-  height: auto;
-  margin: auto;
-}
-
-.contenedorAparatologia {
-  margin: 3px;
-  border: 4px solid grey;
-  border-radius: 2px;
-}
-
-.imgAparatologia {
+.imgMED,
+.imgAparatologia,
+.imgAntiage {
   display: block;
   width: 50%;
   height: auto;
@@ -127,30 +176,7 @@ footer {
   text-transform: uppercase;
 }
 
-.contenedorAntiage {
-  margin: 30px;
-  border: 4px solid grey;
-  border-radius: 2px;
-}
-
-.imgAntiage {
-  display: block;
-  width: 50%;
-  height: auto;
-  margin: auto;
-}
-
-.parrafoAntiage {
-  text-align: center;
-  margin: 20px 0px;
-}
-
-iframe {
-  margin: 30px;
-  display: block;
-  width: 95%;
-}
-
+/* FORMS */
 form {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -176,10 +202,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-.mapTitle {
-  margin-left: 15px;
-}
-
+/* BUTTONS */
 .botonFormulario {
   background-color: rgb(163, 170, 170);
   color: white;
@@ -191,7 +214,11 @@ textarea {
   margin-top: 10px;
 }
 
-/*BANNER*/
+.botonFormulario:hover {
+  background-color: rgb(50, 69, 243);
+}
+
+/* BANNER */
 .banner {
   background-position: center;
   background-image: url(../img/IMG_9593.JPG);
@@ -204,6 +231,7 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+
 .banner::after {
   content: "";
   position: absolute;
@@ -223,12 +251,14 @@ textarea {
   align-items: center;
   padding: 20px;
 }
+
 .bannerContenido h2 {
   font-size: 2rem;
   font-weight: bold;
   color: aliceblue;
   margin-bottom: 10px;
 }
+
 .bannerContenido p {
   color: aliceblue;
   font-size: 4rem;
@@ -238,26 +268,29 @@ textarea {
   margin-bottom: 20px;
   text-align: center;
 }
+
 .bannerContenido .boton {
-  margin-top: 10px;
+  margin-top: 200px;
 }
 
-/*TRATAMIENTOS*/
+/* TREATMENTS */
 .tratamientos {
   text-align: center;
   margin: 10vh;
   border-bottom: 1px solid black;
 }
+
 .tratamientos h3 {
   margin-top: 1.875rem;
   color: rgb(80, 80, 80);
   text-transform: uppercase;
   font-size: 3rem;
 }
+
 .tratamientos p {
-  font-size: 4rem;
-  color: black;
-  padding: 10px;
+  font-size: 2rem;
+  color: rgba(7, 7, 7, 0.315); /* El punto y coma debe estar al final de esta propiedad */
+  padding: .625rem;
 }
 
 .contenedorTratamientos {
@@ -266,11 +299,6 @@ textarea {
   gap: 20px;
 }
 
-.tratamientos {
-  border: 1px solid white;
-  border-radius: 10px;
-  text-align: center;
-}
 
 .tarjeta {
   display: flex;
@@ -283,12 +311,15 @@ textarea {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   margin: 10px;
 }
+
 .tarjeta img {
   max-width: 100%;
 }
+
 .tarjeta p {
   margin: 10px 0;
 }
+
 .tarjeta button {
   background-color: rgb(178, 214, 255);
   color: rgb(99, 99, 99);
@@ -298,34 +329,85 @@ textarea {
   cursor: pointer;
   margin-top: 10px;
 }
+
 .tarjeta button:hover {
   background-color: rgb(50, 69, 243);
 }
 
-.tarjetaProf img {
-  width: 50%;
-  height: auto;
-  align-items: center;
+/* PROFESSIONALS */
+.contenedorProfesionales {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
+.tarjetaProf {
+  margin: 15px;
+  text-align: center;
+  width: calc(33.33% - 30px); /* 3 tarjetas por fila */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tarjetaProf img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
 .tarjetaProf p {
   color: rgb(146, 145, 143);
   font-weight: 700;
   font-style: oblique;
 }
 
-.especialidades,
-.contenedorProfesionales {
-  text-align: center;
+/* AESTHETICS */
+.quienes-somos {
+  background-color: #fff;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/*.footer {
-    background-color: #212121;
-    color: #fff;
-    padding: 20px 0;
-}*/
+.quienes-somos h2 {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.quienes-somos p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.redesSociales {
+  margin-top: 20px;
+}
+
+.redesSociales a {
+  cursor: pointer;
+  margin: 5px 0;
+  color: rgb(15, 15, 15);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.redesSociales a:hover {
+  color: rgb(138, 136, 136);
+}
+
+.redesSociales a svg {
+  width: 30px;
+  height: 30px;
+}
+
 .footerContenido {
-  /*    display: flex;
-      justify-content: center;*/
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -346,75 +428,391 @@ textarea {
   font-size: 1.2rem;
 }
 
-.redesSociales {
+/* Aparatología */
+.contenedorAparatologia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.tarjetaAparatologia {
+  display: flex;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(50% - 20px);
+}
+
+.tarjetaAparatologia img {
+  width: 40%;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.tarjetaAparatologia div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.tarjetaAparatologia h3 {
+  margin-bottom: 10px;
+}
+
+.tarjetaAparatologia p {
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .tarjetaAparatologia {
+    width: 100%;
+  }
+
+  .tarjetaAparatologia img {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* HEADER */
+header {
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos a los extremos */
+  align-items: center;
+  height: 100px;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0);
+  padding: 0 20px; /* Añadido padding para más espaciado dentro del header */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos de la lista */
+  gap: 40px; /* Espaciado entre los elementos */
+}
+
+.encabezado li {
+  list-style-type: none;
+}
+
+.encabezado li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  padding: 10px 20px; /* Añadido padding alrededor de los enlaces para mejorar el espaciado */
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.encabezado li a:hover {
+  background-color: rgb(178, 214, 255); /* Estilo de hover */
+  color: rgb(3, 3, 3);
+}
+
+.logo {
+  width: 150px;
+}
+
+.logoContacto {
+  width: 24%;
+}
+
+.boton {
+  background-color: rgb(152 194 196);
+  color: rgb(252, 251, 251);
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+.boton:hover {
+  background-color: rgb(178, 214, 255);
+  color: rgb(3, 3, 3);
+  cursor: pointer;
+}
+
+/* Hacer que la navbar sea responsive */
+@media (max-width: 768px) {
+  .encabezado {
+    flex-direction: column; /* En pantallas pequeñas, los elementos se apilan verticalmente */
+    align-items: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Los enlaces se apilan verticalmente en pantallas pequeñas */
+    gap: 20px; /* Espaciado entre los enlaces */
+    margin-top: 20px;
+  }
+
+  .logoContacto {
+    width: 70%; /* Ajusta el tamaño del logo en pantallas pequeñas */
+  }
+}
+
+/* Estilo para el contenedor de las imágenes */
+.imagen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  grid-gap: 20px; /* Espacio entre las imágenes */
+  margin-top: 20px; /* Espacio superior */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para las imágenes para que todas tengan el mismo tamaño */
+.contenedorAntiage {
+  width: 100%; /* Las imágenes ocupan el 100% del espacio de su contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgAntiage {
+  width: 100%; /* Ajusta el tamaño de las imágenes */
+  max-width: 500px; /* Tamaño máximo para que las imágenes no sean demasiado grandes */
+  height: auto; /* Mantiene la proporción de las imágenes */
+}
+/* Contenedor de los videos */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  gap: 20px; /* Espacio entre los videos */
+  justify-content: center; /* Centra los videos en el contenedor */
+  margin-top: 40px; /* Espacio superior */
+}
+
+/* Asegurando que los iframes no excedan el tamaño máximo */
+iframe {
+  width: 100%;
+  max-width: 560px; /* Tamaño máximo para los videos */
+  height: 315px; /* Proporción estándar de YouTube */
+  aspect-ratio: 16 / 9; /* Mantiene la proporción estándar de los videos */
+  margin: 0 auto; /* Centra los iframes */
+}
+
+/* Aplicar Playfair Display a todo el texto */
+body, p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400; /* Regular */
+}
+
+/* Aplicar Playfair Display en negrita para los títulos */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700; /* Negrita */
+}
+
+
+/* Estilo para las filas */
+.image-grid, .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px; /* Cambiado de 20px a 80px */
+}
+
+/* Asegurando que las secciones dentro de los contenedores no se solapen */
+.tarjeta {
+  margin-bottom: 20px;
+}
+
+/* Espaciado entre el mapa y el formulario */
+.mapTitle {
   margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Imagen centrada */
+.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Ajusta las imágenes dentro del carrusel */
+.carousel-inner .carousel-item img {
+  width: 100%;                /* Asegura que las imágenes ocupen todo el ancho */
+  height: 400px;              /* Establece una altura fija para todas las imágenes */
+  object-fit: cover;          /* Asegura que las imágenes se ajusten sin distorsionarse */
+  object-position: center;    /* Centra las imágenes dentro de su contenedor */
+}
+
+/* Si quieres que la primera imagen del carrusel tenga un tamaño específico más grande */
+.carousel-item.active img {
+  height: 500px;  /* O ajusta la altura según lo que prefieras */
+}
+
+
+.contenedorProfesionales {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en la primera fila */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+@media (min-width: 768px) {
+  .contenedorProfesionales {
+    grid-template-columns: repeat(4, 1fr); /* 3 columnas en la segunda fila, cuando la pantalla sea mayor a 768px */
+  }
+}
+
+.tarjetaProf {
+  text-align: center; /* Centra el texto dentro de las tarjetas */
+}
+
+.tarjetaProf img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: 0;
+  padding-top: -1%; /* Mantiene una proporción cuadrada en las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+}
+
+/* Profesionales */
+.tarjetaProf img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+}
+
+.tarjetaProf {
+  margin: 15px;
+  text-align: center;
+  width: calc(33.33% - 30px); /* Tres tarjetas por fila en pantallas grandes */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .tarjetaProf {
+    width: calc(50% - 30px); /* Dos tarjetas por fila en pantallas medianas */
+  }
+
+  .tarjetaProf img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+}
+
+@media (max-width: 480px) {
+  .tarjetaProf {
+    width: 100%; /* Una tarjeta por fila en pantallas pequeñas */
+  }
+
+  .tarjetaProf img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* En pantallas más grandes */
+.tarjetaProf {
+  width: 200px;
+  height: 200px;
+}
+
+/* En pantallas pequeñas */
+@media (max-width: 768px) {
+  .tarjetaProf {
+    width: 150px;   /* Contenedor más pequeño en pantallas pequeñas */
+    height: 150px;  /* Mantiene la proporción cuadrada */
+  }
+}
+.tarjetaProf {
+  width: 200px;             /* Ancho del contenedor */
+  height: 200px;            /* Altura igual al ancho (cuadrado) */
+  margin: 15px;
+  text-align: center;
+  overflow: hidden;         /* Esconde el contenido que sobresale */
+  position: relative;       /* Necesario para el posicionamiento de la imagen */
+}
+
+.tarjetaProf img {
+  width: 100%;              /* La imagen ocupa el 100% del ancho del contenedor */
+  height: 100%;             /* La imagen ocupa el 100% de la altura del contenedor */
+  object-fit: cover;        /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+  object-position: center;  /* Centra la imagen dentro del contenedor */
+}
+.tarjetaProf {
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #f0f0f0; /* Fondo gris para depuración */
+  border: 1px solid #ccc;    /* Borde gris claro */
+}
+
+.tarjetaProf img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .redesSociales a {
-  cursor: pointer;
-  margin: 5px 0;
-  color: rgb(15, 15, 15);
-  text-decoration: none;
-  margin-right: 10px;
+  text-decoration: none; /* Elimina subrayado */
+  color: #000; /* Color predeterminado (puedes cambiarlo) */
+  margin: 10px;
+  display: inline-block;
 }
+
 .redesSociales a:hover {
-  color: rgb(138, 136, 136);
+  color: #007bff; /* Color al pasar el cursor (puedes personalizarlo) */
 }
 
-.redesSociales a svg {
-  width: 30px;
-  height: 30px;
+.redesSociales i {
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
 }
 
-.footer i {
-  margin-right: 10px;
+.redesSociales ul {
+  list-style-type: none; /* Eliminar los puntos de la lista */
+  padding: 0;
 }
 
+
+/* Aplicar la fuente Geist Mono */
+.geist-mono {
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;  /* O ajusta el peso que prefieras */
+}
+
+/* Estilo para los títulos ¿Qué es? y ¿Para qué sirve? */
+.titulo {
+  font-family: "Geist Mono", monospace;
+  font-weight: 700;  /* Negrita */
+  font-size: 1.2rem;  /* Ajusta el tamaño según prefieras */
+  margin-bottom: 10px;
+}
+
+
+/* Estilos para el icono flotante de WhatsApp */
 .whatsapp {
-  margin-left: 50%;
+  position: fixed;  /* Esto fija el ícono en la pantalla */
+  bottom: 20px;     /* Distancia desde el borde inferior */
+  right: 20px;      /* Distancia desde el borde derecho */
+  width: 40px;      /* Tamaño del ícono */
+  height: 40px;     /* Tamaño del ícono */
+  z-index: 1000;    /* Asegura que el ícono esté por encima de otros elementos */
+  border-radius: 50%; /* Hace que el fondo del ícono sea circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor del ícono */
+  transition: transform 0.3s ease; /* Transición suave al pasar el ratón */
 }
 
-@media (max-width: 1023px) {
-  .encabezado {
-    height: auto;
-    flex-direction: column;
-    text-align: center;
-  }
-  .encabezado .boton {
-    display: none;
-  }
-  .bannerContenido p {
-    font-size: 2.5rem;
-  }
-  .tratamientos {
-    margin: 5vh;
-    font-size: 2rem;
-  }
-  .tratamientos h3,
-  .tratamientos p {
-    color: #a5a1a1;
-    font-size: inherit;
-  }
-  .contenedorTratamientos {
-    grid-template-columns: 1fr 1fr;
-  }
-  .contenedorProfesionales {
-    flex-direction: column;
-  }
-  .footerContenido {
-    flex-direction: column;
-    text-align: center;
-  }
+/* Efecto de aumento al pasar el ratón sobre el ícono */
+.whatsapp:hover {
+  transform: scale(1.5); /* Aumenta el tamaño cuando el ratón pasa por encima */
 }
-@media (max-width: 768px) {
-  .contenedorTratamientos {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 400px) {
-  .contenedorTratamientos {
-    grid-template-columns: 1fr;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
